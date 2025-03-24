@@ -79,8 +79,8 @@ const MyTheme = {
 
 
 function App(): React.JSX.Element {
-  // persistor.purge(); 
-  // persistor.flush();
+  persistor.purge(); 
+  persistor.flush();
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

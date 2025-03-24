@@ -1,7 +1,9 @@
 import {Text, View, StyleSheet, Dimensions, ScrollView, TouchableOpacity, TextInput, Alert} from 'react-native';
 import Background from '../components/Background';
 import {useNavigation} from '@react-navigation/native';
+import { useDispatch, useSelector } from 'react-redux';
 import {useState} from 'react';
+import {updateGAD} from '../redux/slices/counterSlice';
 //import { ScrollView } from 'react-native-gesture-handler';
 
 
@@ -9,6 +11,7 @@ const Height = Dimensions.get('window').height;
 const Width = Dimensions.get('window').width;
 
 function GAD7 () {
+    const dispatch = useDispatch();
     const navigation = useNavigation();
 
     const [uno, setUno] = useState('');
@@ -25,30 +28,31 @@ function GAD7 () {
         ]);
 
     function InputValidation(){
-        // if(uno < 0 || uno > 3 || uno === ''){
-        //     AlertMessage()
-        // }
-        // else if (dos < 0 || dos > 3 || dos === ''){
-        //     AlertMessage()
-        // }
-        // else if (tres < 0 || tres > 3 || tres === ''){
-        //     AlertMessage()
-        // }
-        // else if (cuatro < 0 || cuatro > 3 || cuatro === ''){
-        //     AlertMessage()
-        // }
-        // else if (cinco < 0 || cinco > 3 || cinco === ''){
-        //     AlertMessage()
-        // }
-        // else if (seis < 0 || seis > 3 || seis === ''){
-        //     AlertMessage()
-        // }
-        // else if (siete < 0 || siete > 3 || siete === ''){
-        //     AlertMessage()
-        // }
-        // else{
-        //     navigation.navigate("Chatbot")
-        // }
+        if(uno < 0 || uno > 3 || uno === ''){
+            AlertMessage()
+        }
+        else if (dos < 0 || dos > 3 || dos === ''){
+            AlertMessage()
+        }
+        else if (tres < 0 || tres > 3 || tres === ''){
+            AlertMessage()
+        }
+        else if (cuatro < 0 || cuatro > 3 || cuatro === ''){
+            AlertMessage()
+        }
+        else if (cinco < 0 || cinco > 3 || cinco === ''){
+            AlertMessage()
+        }
+        else if (seis < 0 || seis > 3 || seis === ''){
+            AlertMessage()
+        }
+        else if (siete < 0 || siete > 3 || siete === ''){
+            AlertMessage()
+        }
+        else{
+            navigation.navigate("Chatbot")
+            dispatch(updateGAD({"responces":[uno,dos,tres,cuatro,cinco,seis,siete]}));
+        }
         navigation.navigate("Chatbot")
     }
 

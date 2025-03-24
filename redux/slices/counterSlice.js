@@ -19,6 +19,10 @@ export const counterSlice = createSlice({
     },
 
     reducers: {
+        updateGAD :(state,action) =>{
+            state.GAD7_Responce = action.payload.responces
+            console.log(state.GAD7_Responce)
+        },
         addUser: (state,action) => {
             console.log("User: ", action.payload.user)
             console.log("Password: ", action.payload.pass)
@@ -30,12 +34,13 @@ export const counterSlice = createSlice({
             // console.log("Password: ", action.payload.pass)
 
             // state.usuarios.push({user: action.payload.user, password: action.payload.pass})
-        }
+        },
+         
    },
 });
 
 
-export const {addUser} = counterSlice.actions;
+export const {addUser,updateGAD} = counterSlice.actions;
 
 
 export default counterSlice.reducer;
