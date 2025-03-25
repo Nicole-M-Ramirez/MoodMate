@@ -7,11 +7,6 @@ import { createSlice } from '@reduxjs/toolkit';
 export const counterSlice = createSlice({
    name: 'counter',
    initialState: {
-        // usuarios: [
-        //     {user: "MoodMate", password: "MoodMate"},
-        // ],
-        // usuarios:["MoodMate"],
-        // contraseñas:["MoodMate"],
         usuarios:{
             "MoodMate":{password:"MoodMate"}
         },

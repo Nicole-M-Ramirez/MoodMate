@@ -27,19 +27,19 @@ function Login () {
     ]);
 
     function ValidarUsuario(){
-        // if(textUser in Usuarios){
-        //     if(Usuarios[textUser].password === textPass){
-        //         navigation.navigate("GAD7")
-        //     }
-        //     else{
-        //         AlertPass()
-        //     }
-        // }
-        // else{
-        //     AlertUser()
-        // }
+        if(textUser in Usuarios){
+            if(Usuarios[textUser].password === textPass){
+                navigation.navigate("GAD7")
+            }
+            else{
+                AlertPass()
+            }
+        }
+        else{
+            AlertUser()
+        }
 
-        navigation.navigate("GAD7")
+        //navigation.navigate("GAD7")
     }
 
     return (

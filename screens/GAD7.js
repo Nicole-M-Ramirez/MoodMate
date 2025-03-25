@@ -53,7 +53,7 @@ function GAD7 () {
             navigation.navigate("Chatbot")
             dispatch(updateGAD({"responces":[uno,dos,tres,cuatro,cinco,seis,siete]}));
         }
-        navigation.navigate("Chatbot")
+        //navigation.navigate("Chatbot")
     }
 
     return (
@@ -61,7 +61,7 @@ function GAD7 () {
             <Background>
 
                 <View style={{width: Width*0.8,left: Width*0.1,top: Height*0.1}}>
-                    <Text style={styles.text}>El siguientes cuestionario representa el GAD-7, utilizado para poder medir niveles de ansiedad en el usuario. Porfavor llene el para poder personalizar su experiencia con el chatbot. Para cada pregunta, seleccione un numero del 0 al 3 por nivel de intensidad</Text>
+                    <Text style={styles.text}>Porfavor llene el para poder personalizar su experiencia con el chatbot. Para cada pregunta, seleccione un numero del 0 al 3 por nivel de intensidad</Text>
                 </View>
 
                 <View style={[styles.box]}>
