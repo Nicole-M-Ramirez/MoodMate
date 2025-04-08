@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import { useSelector } from "react-redux";
 
+import UserAgreement from '../screens/UserAgreement';
 import Login from "../screens/Login";
 import GAD7 from '../screens/GAD7';
 import Menu from '../screens/Menu';
@@ -18,6 +19,7 @@ const StackComp = (props) => {
   // console.log("Registered-----: " + registered);
   return (
     <Stack.Navigator>
+    
     <Stack.Screen
         name='Login'
         component={Login}
