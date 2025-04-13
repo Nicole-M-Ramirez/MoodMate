@@ -19,6 +19,14 @@ function Menu () {
             </View>
 
             <Image style={styles.image} source={require('../assets/SerenaiLogo.png')}/>
+
+            <TouchableOpacity onPress={()=>{navigation.navigate('Configuracion')}}>
+                <Image style={styles.iconImage} source={require('../assets/Configuracion.png')}/>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={()=>{}}>
+                <Image style={[styles.iconImage, {left: Width *0.65, top:Height*0.35}]} source={require('../assets/Refuerzo.png')}/>
+            </TouchableOpacity>
             
         </Background>
     )
@@ -48,5 +56,11 @@ const styles = StyleSheet.create({
         top: (Height*0.17)*0.4,
         left: (Width)*0.1,
         width: Width*0.8,
+    },
+    iconImage:{
+        width: Width*0.22,
+        height: Height*0.1,
+        left: Width *0.15,
+        top: Height*0.45
     },
   });

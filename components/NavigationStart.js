@@ -10,6 +10,7 @@ import Menu from '../screens/Menu';
 import Chatbot from '../screens/Chatbot';
 import ConfirmarUtilidad from '../screens/ConfirmarUtilidad';
 import NewUser from '../screens/NewUser';
+import Configuracion from '../screens/Configuracion';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +51,15 @@ const StackComp = (props) => {
     <Stack.Screen
         name='Menu'
         component={Menu}
+        // independent ={true}
+        options={{
+          headerTitle: "",
+          headerShown: false,
+        }}
+    />
+    <Stack.Screen
+        name='Configuracion'
+        component={Configuracion}
         // independent ={true}
         options={{
           headerTitle: "",
