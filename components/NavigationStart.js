@@ -11,6 +11,8 @@ import Chatbot from '../screens/Chatbot';
 import ConfirmarUtilidad from '../screens/ConfirmarUtilidad';
 import NewUser from '../screens/NewUser';
 import Configuracion from '../screens/Configuracion';
+import Refuerzos from '../screens/Refuerzos';
+import CambiarNumero from '../screens/CambiarNumero';
 
 const Stack = createNativeStackNavigator();
 
@@ -66,6 +68,15 @@ const StackComp = (props) => {
           headerShown: false,
         }}
     />
+     <Stack.Screen
+        name='Refuerzos'
+        component={Refuerzos}
+        // independent ={true}
+        options={{
+          headerTitle: "",
+          headerShown: false,
+        }}
+    />
     <Stack.Screen
         name='Chatbot'
         component={Chatbot}
@@ -78,6 +89,15 @@ const StackComp = (props) => {
     <Stack.Screen
         name='ConfirmarUtilidad'
         component={ConfirmarUtilidad}
+        // independent ={true}
+        options={{
+          headerTitle: "",
+          headerShown: false,
+        }}
+    />
+    <Stack.Screen
+        name='CambiarNumero'
+        component={CambiarNumero}
         // independent ={true}
         options={{
           headerTitle: "",

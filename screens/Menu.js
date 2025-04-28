@@ -24,7 +24,7 @@ function Menu () {
                 <Image style={styles.iconImage} source={require('../assets/Configuracion.png')}/>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=>{}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('Refuerzos')}}>
                 <Image style={[styles.iconImage, {left: Width *0.65, top:Height*0.35}]} source={require('../assets/Refuerzo.png')}/>
             </TouchableOpacity>
             

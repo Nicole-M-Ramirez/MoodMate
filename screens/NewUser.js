@@ -8,6 +8,7 @@ import { colors } from '../components/constants';
 import ScreenLogo from '../components/ScreenLogo';
 
 
+
 const Height = Dimensions.get('window').height;
 const Width = Dimensions.get('window').width;
 

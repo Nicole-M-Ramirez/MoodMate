@@ -11,6 +11,8 @@ export const counterSlice = createSlice({
             "MoodMate":{password:"MoodMate"}
         },
         GAD7_Responce: [null,null,null,null,null,null,null],
+        custodioNum: '0000000000',
+        amigoNum:'0000000000',
     },
 
     reducers: {
@@ -30,12 +32,20 @@ export const counterSlice = createSlice({
 
             // state.usuarios.push({user: action.payload.user, password: action.payload.pass})
         },
+        updateNumber:(state,action)=>{
+            if(action.payload.id === "custodio"){
+                state.custodioNum = action.payload.num
+            }
+            if(action.payload.id === "amigo"){
+                state.amigoNum = action.payload.num
+            }
+        }
          
    },
 });
 
 
-export const {addUser,updateGAD} = counterSlice.actions;
+export const {addUser,updateGAD,updateNumber} = counterSlice.actions;
 
 
 export default counterSlice.reducer;

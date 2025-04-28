@@ -4,12 +4,12 @@ import { colors } from "./constants";
 const Height = Dimensions.get('window').height;
 const Width = Dimensions.get('window').width;
 
-function ScreenLogo ({Title, Color, TextColor }) {
+function ScreenLogo ({Title, Color, TextColor,Top,Left,Size}) {
     return(
         <View style={[styles.view, {backgroundColor: Color}]}>
             <Image style={styles.image} source={require('../assets/SerenaiLogo.png')}/>
-            <View style={{width:(Width*0.74)*0.6}}>
-                <Text style={[styles.text,{color: TextColor}]}>{Title}</Text>
+            <View style={{width:(Width*0.74)*0.6, left:(Width*0.74)*Left, top:(Height*0.13)*Top}}>
+                <Text style={[styles.text,{color: TextColor,fontSize:Size}]}>{Title}</Text>
             </View>
         </View>
     )
@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     },
     text:{
         fontWeight: 700,
-        fontSize: 20,
+        //fontSize: 20,
         color: '#4f545c',
-        left: (Width*0.74)*0.4,
-        top: (Height*0.13)*-0.85
+        // left: (Width*0.74)*0.4,
+        // top: (Height*0.13)*-0.85
     }
   });
