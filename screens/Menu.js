@@ -18,14 +18,16 @@ function Menu () {
                 <Text style={styles.messageText}>{mensajes[random]}</Text>
             </View>
 
-            <Image style={styles.image} source={require('../assets/SerenaiLogo.png')}/>
+            <TouchableOpacity style={{width: Width*0.43, borderRadius:100, left: Width *0.28,top: Height*0.15 }}onPress={()=>{navigation.navigate('GAD7')}}>
+                <Image style={styles.image} source={require('../assets/SerenaiLogo.png')}/>
+            </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=>{navigation.navigate('Configuracion')}}>
+            <TouchableOpacity style={{ width:Width*0.22,borderRadius:100, left: Width *0.15,top: Height*0.45}} onPress={()=>{navigation.navigate('Configuracion')}}>
                 <Image style={styles.iconImage} source={require('../assets/Configuracion.png')}/>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={()=>{navigation.navigate('Refuerzos')}}>
-                <Image style={[styles.iconImage, {left: Width *0.65, top:Height*0.35}]} source={require('../assets/Refuerzo.png')}/>
+            <TouchableOpacity style={{width:Width*0.22,borderRadius:100,left: Width *0.65, top:Height*0.35}} onPress={()=>{navigation.navigate('Refuerzos')}}>
+                <Image style={[styles.iconImage, {}]} source={require('../assets/Refuerzo.png')}/>
             </TouchableOpacity>
             
         </Background>
@@ -38,8 +40,8 @@ const styles = StyleSheet.create({
     image:{
         width: Width*0.43,
         height: Height*0.2,
-        left: Width *0.28,
-        top: Height*0.15
+        //left: Width *0.28,
+        //top: Height*0.15
     },
     messageStyle:{
         //top: Height*0.33,
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
     iconImage:{
         width: Width*0.22,
         height: Height*0.1,
-        left: Width *0.15,
-        top: Height*0.45
+        //left: Width *0.15,
+        //top: Height*0.45
     },
   });
